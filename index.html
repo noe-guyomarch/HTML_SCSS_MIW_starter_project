@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Eval Layout menu</title>
+		<link rel="stylesheet" href="style/style.css">
+
+	</head>
+	<body class="accueil">
+
+		<h1 class="titre">Accueil</h1>
+
+
+		<nav class="barrnav">
+			<div class="hamb" onclick="toggle()">
+				<img class="hambico" src="img/menu_burger/hamburger.png" alt="icone menu burger">
+			</div>
+			<div class="menu hidden">
+				<div><a href="">cerise</a></div>
+				<div><a href="">pomme</a></div>
+				<div><a href="">poire</a></div>
+				<div><a href="">tomate</a></div>
+			</div>
+		</nav>
+
+		<script>
+			function toggle() {
+				let elementToToggle = document.getElementsByClassName("menu")[0];
+				elementToToggle.classList.toggle("hidden");
+
+				let img1 = "img/menu_burger/hamburger.png",
+					img2 = "img/menu_burger/exitico.svg";
+					   
+				let imgElement = document.getElementsByClassName('hambico')[0];
+   				imgElement.src = (imgElement.attributes.src.value === img1)? img2 : img1;	
+			}
+		</script>
+
+	</body>
+</html>
